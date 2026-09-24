@@ -1,6 +1,106 @@
 package koans;
-
 public class AboutMoreMethods {
+    public static int abs(int number) {
+    if (number<0){
+        return -number;
+    } else {
+        return number;
+    }
+    }  
+
+    public static int min(int number, int number2) {
+    if (number<number2){
+        return number;
+    } else {
+        return number2;
+    }
+    }
+
+    public static int remainder(int dividend, int divisor) {
+        return dividend%divisor;
+    }
+
+    public static boolean isEven(int number) {
+        if (number%2==0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isMultiple(int number, int number2) {
+        if (number%number2==0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static void fizzBuzz(int number){
+        if (number%3==0&&number%5==0) {
+            System.out.println("FizzBuzz");
+        } else if (number%3==0) {
+            System.out.println("Fizz");
+        } else if (number%5==0) {
+            System.out.println("Buzz");
+        } 
+
+
+    }
+
+
+}
+
+ /**
+     * # Fizz Buzz
+     * 
+     * Use the previous 'isMultiple' method to code a 'fizzBuzz' method with an integer parameter which displays in the console:
+     * 
+     * - "Fizz" if the integer is a multiple of 3
+     * - "Buzz" if the integer is a multiple of 5
+     * - "FizzBuzz" if the integer is a multiple of 3 and 5
+     * - the integer itself otherwise
+     * 
+     * Warning! Do not recode the computations already coded in the previous method. Instead, reuse it.
+     * 
+     * -------------------------------
+     * 
+     * Expected result:
+     * 
+     * fizzBuzz(20) should display:
+     * 
+     * Buzz
+     * 
+     */ 
+ /**
+     * # Computing whether a number is even or not
+     * 
+     * Write an 'isEven' method which has an integer parameter, and return true if the number is even, false otherwise.
+     * Use the previous method 'remainder' to compute the result.
+     * 
+     * ---------   TIPS --------------
+     * 
+     * The type of a value that can be either true or false is called a 'boolean' in Java.
+     * You already encountered booleans: conditions are using booleans. But you can use booleans outside of conditions. Ex:
+     * 
+     *     boolean result = 3 > 4; // 'result' value is false
+     * 
+     * You can make a method returning a boolean by specifying that the return type of the method is boolean:
+     * 
+     *     public static boolean isCool() {
+     *         // Some code returning a boolean
+     *     }
+     * 
+     * To compute whether or not a number is even, think about what happens to the remainder when you divide that number by 2.
+     * 
+     * -------------------------------
+     * 
+     * Expected result:
+     * 
+     * isEven(5) should return false
+     * 
+     */
+
     /**
      * # Computing the absolute value of a number
      * 
@@ -13,8 +113,6 @@ public class AboutMoreMethods {
      * abs(-2) should return 2
      * 
      */
-
-
      /**
      * # What's the min value?
      * 
@@ -57,35 +155,7 @@ public class AboutMoreMethods {
      */
 
 
-    /**
-     * # Computing whether a number is even or not
-     * 
-     * Write an 'isEven' method which has an integer parameter, and return true if the number is even, false otherwise.
-     * Use the previous method 'remainder' to compute the result.
-     * 
-     * ---------   TIPS --------------
-     * 
-     * The type of a value that can be either true or false is called a 'boolean' in Java.
-     * You already encountered booleans: conditions are using booleans. But you can use booleans outside of conditions. Ex:
-     * 
-     *     boolean result = 3 > 4; // 'result' value is false
-     * 
-     * You can make a method returning a boolean by specifying that the return type of the method is boolean:
-     * 
-     *     public static boolean isCool() {
-     *         // Some code returning a boolean
-     *     }
-     * 
-     * To compute whether or not a number is even, think about what happens to the remainder when you divide that number by 2.
-     * 
-     * -------------------------------
-     * 
-     * Expected result:
-     * 
-     * isEven(5) should return false
-     * 
-     */
-
+   
      
     /**
      * # Computing whether a number is a multiple of another
@@ -128,4 +198,3 @@ public class AboutMoreMethods {
      * 
      */ 
       
-}

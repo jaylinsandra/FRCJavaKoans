@@ -1,6 +1,24 @@
 package koans;
 
 public class AboutConditions {
+    public static String superAwesome(int number){
+        if (number>=0){
+            return "positive";
+        } else{
+            return "negative";
+        }
+    }
+    public static String signOrZero(int number) {
+     if (number>=0){
+            return "positive";
+        } else if (number==0){
+            return "zero";
+        } else {
+            return "negative";
+        }
+    
+    }
+
     /**
      * # If construct, and conditions
      * 
@@ -129,4 +147,19 @@ public class AboutConditions {
      * gradeComment(0) should return "Oops!"
      * 
      */    
+
+    public static String gradeComment(int number){
+        if (number<0|number>=100){
+            return "You cheat!";
+        } else if (number==100){
+            return "Congratulations! You got everything right!";
+        } else if (number==0){
+            return "Oops!";
+        } else if (number>=0&&number<=60 ){
+            return "You failed!";
+        } else {
+            return "Congratulations! You pass!";
+        }
+         
+    }
 }

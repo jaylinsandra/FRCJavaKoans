@@ -3,6 +3,7 @@ package koans;
 import static engine.Helpers.readLine;
 
 public class AboutMethods {
+
     /**
      * # Repetitive tasks
      * 
@@ -26,6 +27,20 @@ public class AboutMethods {
      * 
      */
     public static void computeAgeIn5And10And20YearsConsole() {
+        System.out.println("What is your age?");
+        String age = readLine();
+        int ageNumber= Integer.parseInt(age);
+        System.out.println("In 5 years from now, you will be"+(ageNumber + 5));
+
+        System.out.println("What is your age?");
+        String age2 = readLine();
+        int ageNumber2= Integer.parseInt(age2);
+        System.out.println("In 5 years from now, you will be"+(ageNumber2 + 10));
+
+        System.out.println("What is your age?");
+        String age3 = readLine();
+        int ageNumber3= Integer.parseInt(age3);
+        System.out.println("In 5 years from now, you will be"+(ageNumber3 + 20));
 
     }
 
@@ -116,8 +131,18 @@ public class AboutMethods {
      * 
      */
     public static void computeAgeIn5And10And20YearsConsoleWithMethod() {
-
+        eezpeezie(5);
+        eezpeezie(10);
+        eezpeezie(20);
     }
+    public static void eezpeezie(int year) {
+        System.out.println("What is your age?");
+        String age = readLine();
+        int ageNumber= Integer.parseInt(age);
+        System.out.println("In" +year+ "years from now, you will be"+(ageNumber + year)+".");
+    }
+
+    
 
     /**
      * # Methods can also return results
@@ -176,7 +201,8 @@ public class AboutMethods {
      * 
      */
     public static int square(int number) {
-        return 0;
+        return number*number;
+        
     }    
 
     
@@ -197,6 +223,10 @@ public class AboutMethods {
      * opposite(-5) should return 5
      * 
      */
+    public static int Square(int number) {
+        return number*-1 ;
+        
+    }   
 
 
     /**
@@ -212,4 +242,9 @@ public class AboutMethods {
      * legs(2, 3, 4) should return 32
      * 
      */
+    public static int legs(int chickenCount, int pigCount, int cowCount) {
+        int answer=chickenCount*2+pigCount*4+cowCount*4 ;
+        return answer;
+        
+    }   
 }
